@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Charity – Empowering Change</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+  <style>
+    /* ── Root Variables ─────────────────────────────── */
+    :root {
+      --green:       #4caf50;
+      --green-dark:  #388e3c;
+      --green-light: #e8f5e9;
+      --cream:       #f9f6f1;
+      --charcoal:    #1a1a1a;
+      --muted:       #6b6b6b;
+      --white:       #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: var(--white);
+      color: var(--charcoal);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    /* ── Navbar ─────────────────────────────────────── */
+    .navbar {
+      background: transparent;
+      position: absolute;
+      width: 100%;
+      z-index: 100;
+      padding: 1.4rem 2rem;
+      transition: background 0.3s;
+    }
+
+    .navbar.scrolled {
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, .08);
+      position: fixed;
+      top: 0;
+    }
+
+    .navbar-brand {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      font-size: 1.5rem;
+      color: var(--white) !important;
+      letter-spacing: -0.5px;
+    }
+
+    .navbar.scrolled .navbar-brand {
+      color: var(--green-dark) !important;
+    }
+
+    .nav-link {
+      color: rgba(255, 255, 255, 0.9) !important;
+      font-weight: 500;
+      font-size: 0.9rem;
+      margin: 0 0.3rem;
+      transition: color 0.2s;
+    }
+
+    .navbar.scrolled .nav-link {
+      color: var(--charcoal) !important;
+    }
+
+    .nav-link:hover {
+      color: var(--green) !important;
+    }
+
+    .btn-donate-nav {
+      background: var(--white);
+      color: var(--green-dark) !important;
+      border-radius: 50px;
+      padding: 0.45rem 1.4rem;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: all 0.2s;
+    }
+
+    .btn-donate-nav:hover {
+      background: var(--green);
+      color: var(--white) !important;
+    }
+
+    .navbar.scrolled .btn-donate-nav {
+      background: var(--green);
+      color: var(--white) !important;
+    }
+
+    /* ── Hero ───────────────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      background: 
+        linear-gradient(160deg, rgba(0,0,0,.55) 0%, rgba(30,60,30,.7) 100%),
+        url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1600&q=80') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      padding-top: 5rem;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(76, 175, 80, 0.25);
+      border: 1px solid rgba(76, 175, 80, 0.5);
+      color: #a5d6a7;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 0.35rem 1rem;
+      border-radius: 50px;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      color: var(--white);
+      line-height: 1.1;
+      font-weight: 800;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero h1 span {
+      color: #81c784;
+    }
+
+    .hero p {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.1rem;
+      max-width: 520px;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    .btn-hero {
+      background: var(--green);
+      color: var(--white);
+      border: none;
+      padding: 0.85rem 2.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.25s;
+      box-shadow: 0 8px 24px rgba(76, 175, 80, .4);
+    }
+
+    .btn-hero:hover {
+      background: var(--green-dark);
+      transform: translateY(-2px);
+      color: var(--white);
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(6px); }
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 2.5rem;
+      margin-top: 3rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      padding-top: 1.8rem;
+    }
+
+    .hero-stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .hero-stat-label {
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.6);
+      margin-top: 0.1rem;
+    }
+
+    /* ── Steps card ─────────────────────────────────── */
+    .steps-section {
+      background: var(--white);
+      padding: 2rem 0 3rem;
+    }
+
+    .steps-card {
+      background: var(--white);
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, .1);
+      margin-top: -2rem;
+      position: relative;
+      z-index: 10;
+      padding: 2.5rem 3rem;
+    }
+
+    .step-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #e0e0e0;
+      line-height: 1;
+      margin-bottom: 0.3rem;
+    }
+
+    .step-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin-bottom: 0.5rem;
+    }
+
+    .step-text {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .step-link {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--green);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      margin-top: 0.8rem;
+    }
+
+    .step-link:hover {
+      color: var(--green-dark);
+      gap: 0.6rem;
+    }
+
+    .step-divider {
+      width: 1px;
+      background: #f0ece6;
+      align-self: stretch;
+      margin: 0 1.5rem;
+    }
+
+    /* ── Section helpers ────────────────────────────── */
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 0.7rem;
+      display: block;
+    }
+
+    .section-title {
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--charcoal);
+    }
+
+    /* ── About ──────────────────────────────────────── */
+    .about-section {
+      padding: 7rem 0;
+      background: var(--cream);
+    }
+
+    .about-img-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 10px;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .about-img-grid img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+
+    .about-img-grid img:hover {
+      transform: scale(1.04);
+    }
+
+    .about-img-grid .img-tall {
+      grid-row: span 2;
+      height: 100%;
+    }
+
+    .btn-outline-green {
+      border: 2px solid var(--green);
+      color: var(--green);
+      background: transparent;
+      border-radius: 50px;
+      padding: 0.6rem 1.8rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+    }
+
+    .btn-outline-green:hover {
+      background: var(--green);
+      color: var(--white);
+    }
+
+    /* ── Impact ─────────────────────────────────────── */
+    .impact-section {
+      padding: 7rem 0;
+      background: var(--white);
+    }
+
+    .impact-stat {
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .impact-num {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      color: var(--charcoal);
+    }
+
+    .impact-num span {
+      color: var(--green);
+    }
+
+    .impact-label {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 0.3rem;
+    }
+
+    /* ── CTA Banner ─────────────────────────────────── */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
+      padding: 3.5rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-banner::before {
+      content: '';
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background: rgba(255, 255, 255, 0.07);
+      border-radius: 50%;
+      top: -80px;
+      right: -60px;
+    }
+
+    .cta-banner h2 {
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .cta-banner p {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 0.95rem;
+    }
+
+    .btn-cta-white {
+      background: var(--white);
+      color: var(--green-dark);
+      border: none;
+      border-radius: 50px;
+      padding: 0.75rem 2rem;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    .btn-cta-white:hover {
+      background: var(--charcoal);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    /* ── Volunteer / Get Involved ───────────────────── */
+    .volunteer-section {
+      padding: 7rem 0;
+      background: var(--cream);
+    }
+
+    .volunteer-img {
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .volunteer-img img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+
+    .volunteer-badge {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 1.5rem;
+      background: var(--white);
+      border-radius: 12px;
+      padding: 0.8rem 1.2rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, .1);
+      font-size: 0.82rem;
+    }
+
+    .volunteer-badge strong {
+      color: var(--green);
+      font-size: 1.2rem;
+    }
+
+    .btn-register {
+      background: transparent;
+      border: 2px solid var(--charcoal);
+      color: var(--charcoal);
+      border-radius: 50px;
+      padding: 0.65rem 1.8rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .btn-register:hover {
+      background: var(--charcoal);
+      color: var(--white);
+    }
+
+    /* ── Stories ────────────────────────────────────── */
+    .stories-section {
+      padding: 7rem 0;
+      background: var(--white);
+    }
+
+    .story-card {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, .07);
+      transition: transform 0.3s, box-shadow 0.3s;
+      background: var(--white);
+    }
+
+    .story-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, .12);
+    }
+
+    .story-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .story-card-body {
+      padding: 1.4rem;
+    }
+
+    .story-tag {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .story-card-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin-bottom: 0.5rem;
+    }
+
+    .story-card-text {
+      font-size: 0.83rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .story-read-more {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--green);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: gap 0.2s;
+    }
+
+    .story-read-more:hover {
+      gap: 0.6rem;
+      color: var(--green-dark);
+    }
+
+    /* ── Partners ───────────────────────────────────── */
+    .partners-section {
+      padding: 4rem 0;
+      background: var(--cream);
+    }
+
+    .partner-logo {
+      height: 40px;
+      opacity: 0.4;
+      filter: grayscale(1);
+      transition: opacity 0.2s, filter 0.2s;
+      object-fit: contain;
+    }
+
+    .partner-logo:hover {
+      opacity: 0.9;
+      filter: grayscale(0);
+    }
+
+    .partner-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem 2rem;
+    }
+
+    .partner-placeholder {
+      height: 36px;
+      background: #d0d0d0;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      color: #999;
+      font-weight: 600;
+      letter-spacing: 1px;
+      padding: 0 1.5rem;
+      opacity: 0.6;
+    }
+
+    /* ── Footer ─────────────────────────────────────── */
+    footer {
+      background: #111;
+      color: rgba(255, 255, 255, 0.7);
+      padding: 4rem 0 2rem;
+    }
+
+    .footer-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--white);
+    }
+
+    .footer-brand span {
+      color: var(--green);
+    }
+
+    .footer-desc {
+      font-size: 0.85rem;
+      line-height: 1.7;
+      margin-top: 0.7rem;
+      max-width: 240px;
+    }
+
+    .footer-heading {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.55rem;
+    }
+
+    .footer-links a {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.55);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--green);
+    }
+
+    .footer-contact {
+      font-size: 0.85rem;
+      line-height: 1.8;
+    }
+
+    .footer-contact i {
+      color: var(--green);
+      margin-right: 0.5rem;
+    }
+
+    .footer-divider {
+      border-color: rgba(255, 255, 255, 0.08);
+      margin: 2.5rem 0 1.5rem;
+    }
+
+    .footer-bottom {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    .social-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.85rem;
+      transition: all 0.2s;
+      text-decoration: none;
+      margin-right: 0.4rem;
+    }
+
+    .social-icon:hover {
+      background: var(--green);
+      border-color: var(--green);
+      color: var(--white);
+    }
+
+    /* ── Animations ─────────────────────────────────── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── Mobile ─────────────────────────────────────── */
+    @media (max-width: 767px) {
+      .steps-card {
+        margin-top: 0;
+        padding: 1.5rem;
+      }
+
+      .step-divider {
+        display: none;
+      }
+
+      .hero-stats {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <nav class="navbar navbar-expand-lg" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <i class="bi bi-heart-fill text-success me-1" style="font-size:1rem"></i>Charity
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#impact">Our Work</a></li>
+          <li class="nav-item"><a class="nav-link" href="#stories">Stories</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <a href="#donate" class="btn btn-donate-nav">Donate</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <section class="hero position-relative">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <span class="hero-badge">
+            <i class="bi bi-star-fill me-1" style="font-size:0.6rem"></i>Making a Difference Since 2010
+          </span>
+          <h1>Empowering <span>Change,</span><br>One Step at a Time</h1>
+          <p>Every small act of kindness creates a ripple of positive change. Join us in making a difference in lives together.</p>
+          <a href="#donate" class="btn btn-hero">
+            Donate Now &nbsp;<i class="bi bi-arrow-right"></i>
+          </a>
+          <div class="hero-stats">
+            <div>
+              <div class="hero-stat-num">20M+</div>
+              <div class="hero-stat-label">People Served</div>
+            </div>
+            <div>
+              <div class="hero-stat-num">142K</div>
+              <div class="hero-stat-label">Projects Funded</div>
+            </div>
+            <div>
+              <div class="hero-stat-num">5,246</div>
+              <div class="hero-stat-label">Partner Orgs</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <i class="bi bi-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- ═══════════ STEPS CARD ═══════════ -->
+  <section class="steps-section pt-0 pb-5">
+    <div class="container">
+      <div class="steps-card fade-up">
+        <div class="row align-items-start g-0">
+
+          <div class="col-12 col-md-4 d-flex">
+            <div class="flex-grow-1">
+              <div class="step-num">01.</div>
+              <div class="step-title">Causes</div>
+              <p class="step-text">We support education, healthcare, and poverty reduction across communities worldwide.</p>
+              <a href="#" class="step-link">See Proof <i class="bi bi-arrow-right"></i></a>
+            </div>
+            <div class="step-divider d-none d-md-block"></div>
+          </div>
+
+          <div class="col-12 col-md-4 d-flex mt-4 mt-md-0">
+            <div class="flex-grow-1">
+              <div class="step-num">02.</div>
+              <div class="step-title">Get Involved</div>
+              <p class="step-text">Volunteer or donate your skills to make a meaningful difference in someone's life.</p>
+              <a href="#" class="step-link">View Financials <i class="bi bi-arrow-right"></i></a>
+            </div>
+            <div class="step-divider d-none d-md-block"></div>
+          </div>
+
+          <div class="col-12 col-md-4 mt-4 mt-md-0">
+            <div class="step-num">03.</div>
+            <div class="step-title">Donation</div>
+            <p class="step-text">Contribute today and help us change lives and build a better, more equitable future.</p>
+            <a href="#donate" class="step-link">Learn More <i class="bi bi-arrow-right"></i></a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ ABOUT ═══════════ -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="row align-items-center g-5">
+
+        <!-- Images -->
+        <div class="col-lg-5 order-lg-2 fade-up">
+          <div class="about-img-grid">
+            <img class="img-tall" src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=500&q=80" alt="Hands holding flower" style="height:100%; min-height:410px"/>
+            <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?w=500&q=80" alt="Volunteers" style="height:200px"/>
+            <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=500&q=80" alt="Donation" style="height:200px"/>
+          </div>
+        </div>
+
+        <!-- Text -->
+        <div class="col-lg-7 order-lg-1 fade-up">
+          <span class="section-label">About Us</span>
+          <h2 class="section-title mb-4">Our journey of<br>compassion and hope</h2>
+          <p class="text-muted mb-3" style="line-height:1.8">
+            Join us as a journey towards compassion and hope. Through our non-profit organisation, we strive to make a positive impact on the world. Give back to your community and be a part of something greater than yourself.
+          </p>
+          <p class="text-muted mb-4" style="line-height:1.8">
+            A transformational journey towards bringing hope and compassion to the world — one community at a time.
+          </p>
+          <a href="#" class="btn btn-outline-green">Read More</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ IMPACT ═══════════ -->
+  <section class="impact-section" id="impact">
+    <div class="container">
+      <div class="row justify-content-between align-items-end mb-5">
+        <div class="col-lg-6 fade-up">
+          <span class="section-label">Our Impact</span>
+          <h2 class="section-title">The impact we have<br>made in our community</h2>
+        </div>
+        <div class="col-lg-5 fade-up">
+          <p class="text-muted" style="font-size:0.9rem; line-height:1.8">
+            We have made a significant impact in our community through our non-profit organisation. By providing services and support to those in need, we have created a ripple of change. Our efforts have helped to improve the lives of many and we are committed to continuing to make a difference.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4 fade-up">
+        <div class="col-6 col-md-3">
+          <div class="impact-stat">
+            <div class="impact-num">20M<span>+</span></div>
+            <div class="impact-label">People served worldwide</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="impact-stat">
+            <div class="impact-num">142<span>,790</span></div>
+            <div class="impact-label">Projects funded</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="impact-stat">
+            <div class="impact-num">1.8<span>M</span></div>
+            <div class="impact-label">People to take action</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="impact-stat">
+            <div class="impact-num">5<span>,246</span></div>
+            <div class="impact-label">Partner organisations</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ CTA BANNER ═══════════ -->
+  <section class="cta-banner" id="donate">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8 fade-up">
+          <h2>We can create a better tomorrow</h2>
+          <p class="mt-2 mb-0">Every dollar counts and helps us bring hope and essential resources to those in need.</p>
+        </div>
+        <div class="col-lg-4 text-lg-end fade-up">
+          <a href="#" class="btn btn-cta-white">
+            Donate Now &nbsp;<i class="bi bi-heart-fill text-danger" style="font-size:0.8rem"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ VOLUNTEER ═══════════ -->
+  <section class="volunteer-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+
+        <div class="col-lg-5 fade-up">
+          <div class="volunteer-img">
+            <img src="https://images.unsplash.com/photo-1593113630400-ea4288922559?w=700&q=80" alt="Volunteers with aid boxes"/>
+            <div class="volunteer-badge">
+              <div class="text-muted" style="font-size:0.7rem">Active volunteers</div>
+              <strong>12,400+</strong>
+              <div style="font-size:0.75rem; color:#555"> worldwide</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 offset-lg-1 fade-up">
+          <span class="section-label">Get Involved</span>
+          <h2 class="section-title mb-4">Join our movement<br>for change</h2>
+          <p class="text-muted mb-3" style="line-height:1.8">
+            Join our non-profit organisation and be a part of our movement for positive change. We empower communities, support sustainable initiatives and strive towards building an equitable society. Together, we can create a better world.
+          </p>
+          <p class="text-muted mb-4" style="line-height:1.8">
+            Become part of a transformative movement by supporting our non-profit organisation. Together we can make lasting change.
+          </p>
+          <a href="#" class="btn btn-register">Register Now &nbsp;<i class="bi bi-arrow-right"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ STORIES ═══════════ -->
+  <section class="stories-section" id="stories">
+    <div class="container">
+      <div class="text-center mb-5 fade-up">
+        <span class="section-label">Our Stories</span>
+        <h2 class="section-title">Inspiring tales of transformation</h2>
+        <p class="text-muted mx-auto mt-3" style="max-width:500px; font-size:0.9rem; line-height:1.7">
+          Get inspired by the remarkable stories of transformation through our non-profit organisation. Join us in making a positive impact today.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4 fade-up">
+          <div class="story-card">
+            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&q=80" alt="Story 1"/>
+            <div class="story-card-body">
+              <span class="story-tag">Education</span>
+              <div class="story-card-title">The Special One</div>
+              <p class="story-card-text">Our non-profit organisation helps create a brighter future for those in need. Every donation counts towards making a difference.</p>
+              <a href="#" class="story-read-more">Read More <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 fade-up">
+          <div class="story-card">
+            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80" alt="Story 2"/>
+            <div class="story-card-body">
+              <span class="story-tag">Community</span>
+              <div class="story-card-title">A Better Education for Everyone</div>
+              <p class="story-card-text">Our non-profit organisation is dedicated to improving access to education for all. With your support, we can help provide the resources and opportunities needed for success.</p>
+              <a href="#" class="story-read-more">Read More <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 fade-up">
+          <div class="story-card">
+            <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=600&q=80" alt="Story 3"/>
+            <div class="story-card-body">
+              <span class="story-tag">Healthcare</span>
+              <div class="story-card-title">Health for Every Child</div>
+              <p class="story-card-text">Providing access to basic healthcare services for children in underserved communities — giving them a chance at a healthy life.</p>
+              <a href="#" class="story-read-more">Read More <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ PARTNERS ═══════════ -->
+  <section class="partners-section">
+    <div class="container">
+      <p class="text-center section-label mb-4" style="font-size:0.7rem">Our Partners</p>
+      <div class="row justify-content-center align-items-center g-3">
+        <div class="col-6 col-md-2 partner-box"><div class="partner-placeholder">LOGO 01</div></div>
+        <div class="col-6 col-md-2 partner-box"><div class="partner-placeholder">Lipsum</div></div>
+        <div class="col-6 col-md-2 partner-box"><div class="partner-placeholder">LOGO 02</div></div>
+        <div class="col-6 col-md-2 partner-box"><div class="partner-placeholder">LOGO 03</div></div>
+        <div class="col-6 col-md-2 partner-box"><div class="partner-placeholder">LOGO 04</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer id="contact">
+    <div class="container">
+      <div class="row g-5">
+
+        <div class="col-lg-3">
+          <div class="footer-brand"><span>C</span>harity</div>
+          <p class="footer-desc">The power of giving. Support a cause and make a difference through charity.</p>
+          <div class="mt-3">
+            <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <div class="footer-heading">About Us</div>
+          <ul class="footer-links">
+            <li><a href="#">Our History</a></li>
+            <li><a href="#">What We Believe</a></li>
+            <li><a href="#">Our Programs</a></li>
+            <li><a href="#">Partners</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <div class="footer-heading">Ways to Give</div>
+          <ul class="footer-links">
+            <li><a href="#">Fundraise</a></li>
+            <li><a href="#">Planned Giving</a></li>
+            <li><a href="#">Brand Partnership</a></li>
+            <li><a href="#">Legacy Giving</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="footer-heading">Contact Info</div>
+          <div class="footer-contact">
+            <p><i class="bi bi-geo-alt-fill"></i>1234 Thornridge Cir. Syracuse, Connecticut 35799</p>
+            <p><i class="bi bi-telephone-fill"></i>(406) 555-0120</p>
+            <p><i class="bi bi-envelope-fill"></i>mail@example.com</p>
+          </div>
+        </div>
+
+      </div>
+
+      <hr class="footer-divider"/>
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center footer-bottom">
+        <span>© 2026 Non-Profit Organization. All rights reserved.</span>
+        <span class="mt-2 mt-md-0">Made with <i class="bi bi-heart-fill text-success" style="font-size:0.7rem"></i> for a better world</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Navbar scroll effect
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Scroll reveal animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('visible'), i * 80);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
