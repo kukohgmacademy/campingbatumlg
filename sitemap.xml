@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Halaman Utama -->
+  <url>
+    <loc>https://campingbatumalang.web.id/</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Halaman Tentang -->
+  <url>
+    <loc>https://campingbatumalang.web.id/about.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Halaman Paket -->
+  <url>
+    <loc>https://campingbatumalang.web.id/paket.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Halaman Galeri -->
+  <url>
+    <loc>https://campingbatumalang.web.id/galeri.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Halaman Blog -->
+  <url>
+    <loc>https://campingbatumalang.web.id/blog.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Halaman Kontak -->
+  <url>
+    <loc>https://campingbatumalang.web.id/kontak.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Artikel Blog 1 -->
+  <url>
+    <loc>https://campingbatumalang.web.id/tips-camping-di-batu-malang.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Artikel Blog 2 -->
+  <url>
+    <loc>https://campingbatumalang.web.id/rekomendasi-spot-camping-terbaik-batu-malang.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Artikel Blog 3 -->
+  <url>
+    <loc>https://campingbatumalang.web.id/panduan-camping-keluarga-batu-sunrise-camp.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Artikel Blog 4 -->
+  <url>
+    <loc>https://campingbatumalang.web.id/aktivitas-seru-camping-di-batu.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Artikel Blog 5 -->
+  <url>
+    <loc>https://campingbatumalang.web.id/keindahan-langit-malam-camping-batu-malang.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
