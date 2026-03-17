@@ -34,7 +34,7 @@
 
   <url>
     <loc>https://campingbatumalang.web.id/blog.html</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -47,15 +47,29 @@
   </url>
 
   <url>
+    <loc>https://campingbatumalang.web.id/rekomendasi-pakaian-camping-batu-malang.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://campingbatumalang.web.id/tips-api-unggun-camping-batu-malang.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://campingbatumalang.web.id/memilih-tenda-camping-batu-malang.html</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://campingbatumalang.web.id/makanan-praktis-camping-batu-malang.html</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
