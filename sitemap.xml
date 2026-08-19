@@ -616,4 +616,16 @@
     <priority>0.8</priority>
   </url>
 
+    <url>
+        <loc>https://campingbatumalang.web.id/manfaat-dan-prosedur-mpls-outbound-bagi-sekolah.html</loc>
+        <lastmod>2026-06-21T08:00:00+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://campingbatumalang.web.id/cakupan-wilayah-outbound-sekolah-di-malang-raya.html</loc>
+        <lastmod>2026-06-22T08:00:00+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
 </urlset>
