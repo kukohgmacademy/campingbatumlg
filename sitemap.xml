@@ -640,4 +640,16 @@
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
+    <url>
+        <loc>https://campingbatumalang.web.id/sop-rafting-standar-keselamatan-yang-wajib-ada.html</loc>
+        <lastmod>2026-06-25T08:00:00+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://campingbatumalang.web.id/tips-memilih-vendor-rafting-yang-aman-dan-terpercaya.html</loc>
+        <lastmod>2026-06-26T08:00:00+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
 </urlset>
