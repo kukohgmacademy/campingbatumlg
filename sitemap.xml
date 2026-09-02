@@ -748,4 +748,16 @@
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
+    <url>
+        <loc>https://campingbatumalang.web.id/wisata-alam-di-batu-di-luar-destinasi-mainstream.html</loc>
+        <lastmod>2026-07-13T08:00:00+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://campingbatumalang.web.id/air-terjun-dan-hutan-pinus-tersembunyi-di-batu.html</loc>
+        <lastmod>2026-07-14T08:00:00+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
 </urlset>
