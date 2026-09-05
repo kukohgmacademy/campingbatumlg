@@ -784,4 +784,16 @@
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
+    <url>
+        <loc>https://campingbatumalang.web.id/itinerary-sehari-wisata-malang-kota-panduan-menjelajahi-kayutangan-dan-sekitarnya.html</loc>
+        <lastmod>2026-07-19T08:00:00+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://campingbatumalang.web.id/tips-memadukan-wisata-malang-kota-dengan-trip-ke-batu-dalam-satu-hari.html</loc>
+        <lastmod>2026-07-20T08:00:00+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
 </urlset>
