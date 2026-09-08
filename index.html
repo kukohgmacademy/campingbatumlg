@@ -19,7 +19,7 @@
   <meta property="og:title" content="Batu Sunrise Camp - Camping Terbaik di Batu Malang">
   <meta property="og:description"
     content="Nikmati pengalaman camping terbaik dengan pemandangan sunrise spektakuler di Batu Malang. Fasilitas lengkap & harga terjangkau.">
-  <meta property="og:image" content="https://campingbatumalang.web.id/img/hero-bg.png">
+  <meta property="og:image" content="https://campingbatumalang.web.id/img/hero-bg.webp">
   <meta property="og:url" content="https://campingbatumalang.web.id/">
   <meta property="og:site_name" content="Batu Sunrise Camp">
 
@@ -28,16 +28,24 @@
   <meta name="twitter:title" content="Batu Sunrise Camp - Camping Terbaik di Batu Malang">
   <meta name="twitter:description"
     content="Nikmati pengalaman camping terbaik dengan pemandangan sunrise spektakuler di Batu Malang.">
-  <meta name="twitter:image" content="https://campingbatumalang.web.id/img/hero-bg.png">
+  <meta name="twitter:image" content="https://campingbatumalang.web.id/img/hero-bg.webp">
 
   <!-- Favicon -->
   <link rel="icon" type="image/webp" href="img/logo.webp">
   <link rel="apple-touch-icon" href="img/logo.webp">
 
+  <!-- Preconnect & Preload LCP Hero -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="image" href="img/hero-bg.webp" fetchpriority="high">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Bootstrap Icons (Non-blocking) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"></noscript>
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css">
 
@@ -50,7 +58,7 @@
     "description": "Batu Sunrise Camp menyediakan pengalaman camping terbaik di Batu Malang dengan pemandangan sunrise spektakuler.",
     "url": "https://campingbatumalang.web.id",
     "telephone": "+6281239225692",
-    "image": "https://campingbatumalang.web.id/img/hero-bg.png",
+    "image": "https://campingbatumalang.web.id/img/hero-bg.webp",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Batu",
@@ -99,8 +107,8 @@
 
   <!-- ========== HERO SECTION ========== -->
   <section class="hero-section" id="hero">
-    <img src="img/hero-bg.png" alt="Pemandangan Batu Sunrise Camp" class="hero-bg" width="1920" height="1080"
-      loading="eager">
+    <img src="img/hero-bg.webp" alt="Pemandangan Batu Sunrise Camp" class="hero-bg" width="1920" height="1080"
+      fetchpriority="high" loading="eager">
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="hero-badge">
@@ -142,7 +150,7 @@
       <div class="row align-items-center g-5">
         <div class="col-lg-6 animate-on-scroll">
           <div class="about-img-wrapper">
-            <img src="img/about-camp.png" alt="Tentang Batu Sunrise Camp" width="600" height="400" loading="lazy">
+            <img src="img/about-camp.webp" alt="Tentang Batu Sunrise Camp" width="600" height="400" loading="lazy">
             <div class="about-badge-float">
               <i class="bi bi-award me-2"></i>Terpercaya
             </div>
@@ -193,7 +201,7 @@
         <div class="col-lg-4 col-md-6 animate-on-scroll">
           <div class="paket-card">
             <div class="paket-img">
-              <img src="img/3.png" alt="Paket Sunrise 1 Batu Sunrise Camp" width="400" height="220" loading="lazy">
+              <img src="img/3.webp" alt="Paket Sunrise 1 Batu Sunrise Camp" width="400" height="220" loading="lazy">
               <span class="paket-badge">Hemat</span>
             </div>
             <div class="paket-body">
@@ -218,7 +226,7 @@
         <div class="col-lg-4 col-md-6 animate-on-scroll">
           <div class="paket-card">
             <div class="paket-img">
-              <img src="img/5.png" alt="Paket Sunrise 2 Batu Sunrise Camp" width="400" height="220" loading="lazy">
+              <img src="img/5.webp" alt="Paket Sunrise 2 Batu Sunrise Camp" width="400" height="220" loading="lazy">
               <span class="paket-badge">Best Seller</span>
             </div>
             <div class="paket-body">
@@ -243,7 +251,7 @@
         <div class="col-lg-4 col-md-6 animate-on-scroll">
           <div class="paket-card">
             <div class="paket-img">
-              <img src="img/6.png" alt="Paket Sunrise 3 Batu Sunrise Camp" width="400" height="220" loading="lazy">
+              <img src="img/6.webp" alt="Paket Sunrise 3 Batu Sunrise Camp" width="400" height="220" loading="lazy">
               <span class="paket-badge">Premium</span>
             </div>
             <div class="paket-body">
@@ -364,7 +372,7 @@
             <p class="quote">"Pengalaman camping terbaik yang pernah saya rasakan! Pemandangan sunrisenya luar biasa
               indah. Fasilitas lengkap dan timnya sangat ramah. Pasti akan kembali lagi!"</p>
             <div class="reviewer">
-              <img src="img/testi1.png" alt="Andi Pratama" width="50" height="50" loading="lazy">
+              <img src="img/testi1.webp" alt="Andi Pratama" width="50" height="50" loading="lazy">
               <div class="reviewer-info">
                 <h5>Andi Pratama</h5>
                 <span>Pengusaha, Surabaya</span>
@@ -381,7 +389,7 @@
             <p class="quote">"Camping bareng keluarga di sini benar-benar menyenangkan. Anak-anak senang banget!
               Tempatnya aman, bersih dan pemandangannya sangat indah. Sangat direkomendasikan!"</p>
             <div class="reviewer">
-              <img src="img/testi2.png" alt="Siti Nurhaliza" width="50" height="50" loading="lazy">
+              <img src="img/testi2.webp" alt="Siti Nurhaliza" width="50" height="50" loading="lazy">
               <div class="reviewer-info">
                 <h5>Siti Nurhaliza</h5>
                 <span>Ibu Rumah Tangga, Malang</span>
@@ -398,7 +406,7 @@
             <p class="quote">"Tempatnya keren banget! Cocok untuk team building kantor. Pemandangannya instagramable,
               fasilitas oke, dan harganya worth it. Next pasti balik lagi!"</p>
             <div class="reviewer">
-              <img src="img/testi3.png" alt="Budi Santoso" width="50" height="50" loading="lazy">
+              <img src="img/testi3.webp" alt="Budi Santoso" width="50" height="50" loading="lazy">
               <div class="reviewer-info">
                 <h5>Budi Santoso</h5>
                 <span>Manager HRD, Jakarta</span>
@@ -422,7 +430,7 @@
         <div class="col-lg-4 col-md-6 animate-on-scroll">
           <div class="blog-card">
             <div class="blog-img">
-              <img src="img/blog-sunrise.png" alt="Tips Camping di Batu Malang" width="400" height="200" loading="lazy">
+              <img src="img/blog-sunrise.webp" alt="Tips Camping di Batu Malang" width="400" height="200" loading="lazy">
               <span class="blog-category">Tips</span>
             </div>
             <div class="blog-body">
@@ -441,7 +449,7 @@
         <div class="col-lg-4 col-md-6 animate-on-scroll">
           <div class="blog-card">
             <div class="blog-img">
-              <img src="img/blog-campfire.png" alt="Rekomendasi Spot Camping Terbaik" width="400" height="200"
+              <img src="img/blog-campfire.webp" alt="Rekomendasi Spot Camping Terbaik" width="400" height="200"
                 loading="lazy">
               <span class="blog-category">Rekomendasi</span>
             </div>
@@ -461,7 +469,7 @@
         <div class="col-lg-4 col-md-6 animate-on-scroll">
           <div class="blog-card">
             <div class="blog-img">
-              <img src="img/blog-family.png" alt="Camping Keluarga di Batu Sunrise Camp" width="400" height="200"
+              <img src="img/blog-family.webp" alt="Camping Keluarga di Batu Sunrise Camp" width="400" height="200"
                 loading="lazy">
               <span class="blog-category">Keluarga</span>
             </div>
@@ -590,9 +598,9 @@
   </div>
 
   <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
   <!-- Custom JS -->
-  <script src="js/main.js"></script>
+  <script src="js/main.js" defer></script>
 </body>
 
 </html>

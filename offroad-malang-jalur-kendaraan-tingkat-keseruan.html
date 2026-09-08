@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="id">
 
 <head>
@@ -28,8 +28,18 @@
     <meta name="twitter:image" content="https://campingbatumalang.web.id/img/Slide16.JPG">
     <link rel="icon" type="image/webp" href="img/logo.webp">
     <link rel="apple-touch-icon" href="img/logo.webp">
+        <!-- Preconnect & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Bootstrap Icons (Non-blocking) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"></noscript>
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
     <script type="application/ld+json">
     {
@@ -148,7 +158,7 @@
                     <p>Kendaraan yang digunakan untuk offroad di Malang umumnya adalah jeep 4x4 yang dirancang khusus untuk medan tidak rata, dengan kapasitas penumpang terbatas demi keamanan dan kenyamanan.</p>
                     <p>Jeep menjadi pilihan utama karena memiliki sistem penggerak roda empat yang membantu menjaga traksi di medan berbatu, berlumpur, maupun menanjak. Selain jeep, beberapa operator wisata juga menyediakan variasi kendaraan off-road lain sesuai kebutuhan rombongan. Pengemudi yang bertugas biasanya merupakan penduduk lokal yang telah terbiasa dengan karakteristik jalur di kawasan tersebut, sehingga dapat membantu menjaga keselamatan selama perjalanan.</p>
 
-                    <div class="article-img"><img src="img/5.png"
+                    <div class="article-img"><img src="img/5.webp"
                             alt="Jeep offroad 4x4 melintasi medan menantang dan jalur perbukitan di kawasan Malang" width="800" height="400"
                             loading="lazy"></div>
                     <p class="img-caption">Petualangan offroad dengan jeep 4x4 melintasi jalur berbukit dan tanah berbatu menghadirkan sensasi wisata yang menantang.</p>
@@ -219,7 +229,7 @@
                     </div>
                 </div>
 
-                <div class="author-profile"><img src="img/author.png" alt="Abiyyu" width="80" height="80"
+                <div class="author-profile"><img src="img/author.webp" alt="Abiyyu" width="80" height="80"
                         loading="lazy">
                     <div class="author-info">
                         <h5>Abiyyu</h5>
@@ -240,7 +250,7 @@
                     <div class="row g-4">
                         <div class="col-md-4">
                             <div class="blog-card">
-                                <div class="blog-img"><img src="img/blog-family.png" alt="Contoh Event Musiman Wisata Sepanjang Tahun" width="400"
+                                <div class="blog-img"><img src="img/blog-family.webp" alt="Contoh Event Musiman Wisata Sepanjang Tahun" width="400"
                                         height="200" loading="lazy"><span class="blog-category">Panduan</span></div>
                                 <div class="blog-body">
                                     <div class="blog-meta"><span><i class="bi bi-calendar3"></i> 16 Apr 2026</span>
@@ -254,7 +264,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="blog-card">
-                                <div class="blog-img"><img src="img/blog-hiking.png" alt="Manfaat Kalender Event Musiman Wisata bagi Wisatawan" width="400"
+                                <div class="blog-img"><img src="img/blog-hiking.webp" alt="Manfaat Kalender Event Musiman Wisata bagi Wisatawan" width="400"
                                         height="200" loading="lazy"><span class="blog-category">Panduan</span></div>
                                 <div class="blog-body">
                                     <div class="blog-meta"><span><i class="bi bi-calendar3"></i> 15 Apr 2026</span>
@@ -268,7 +278,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="blog-card">
-                                <div class="blog-img"><img src="img/blog-sunrise.png" alt="Cara Membaca Musim Ramai dan Sepi Wisata" width="400"
+                                <div class="blog-img"><img src="img/blog-sunrise.webp" alt="Cara Membaca Musim Ramai dan Sepi Wisata" width="400"
                                         height="200" loading="lazy"><span class="blog-category">Panduan</span></div>
                                 <div class="blog-body">
                                     <div class="blog-meta"><span><i class="bi bi-calendar3"></i> 14 Apr 2026</span>
@@ -341,8 +351,8 @@
     <div class="scroll-top" id="scrollTop"><a href="#" aria-label="Scroll to top"
             onclick="window.scrollTo({top:0,behavior:'smooth'});return false;"><i class="bi bi-chevron-up"></i></a>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/main.js" defer></script>
 </body>
 
 </html>
