@@ -832,4 +832,16 @@
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
+    <url>
+        <loc>https://campingbatumalang.web.id/lokasi-dan-cara-menuju-mikutopia-batu-malang.html</loc>
+        <lastmod>2026-07-27T08:00:00+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://campingbatumalang.web.id/fakta-izin-dan-insiden-di-balik-viralnya-mikutopia-batu.html</loc>
+        <lastmod>2026-07-28T08:00:00+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
 </urlset>
