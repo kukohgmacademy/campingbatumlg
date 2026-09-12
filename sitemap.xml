@@ -856,4 +856,16 @@
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
+    <url>
+        <loc>https://campingbatumalang.web.id/taman-bunga-di-dusun-kuliner-batu-sebagai-spot-foto-musiman.html</loc>
+        <lastmod>2026-07-31T08:00:00+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://campingbatumalang.web.id/tips-dan-waktu-terbaik-berfoto-di-taman-bunga-batu.html</loc>
+        <lastmod>2026-08-01T08:00:00+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
 </urlset>
