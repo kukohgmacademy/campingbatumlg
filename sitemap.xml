@@ -892,4 +892,16 @@
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
+    <url>
+        <loc>https://campingbatumalang.web.id/panduan-lengkap-rafting-kaliwatu-rute-dan-tips.html</loc>
+        <lastmod>2026-08-06T08:00:00+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://campingbatumalang.web.id/rute-dan-tingkat-kesulitan-rafting-kaliwatu.html</loc>
+        <lastmod>2026-08-07T08:00:00+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
 </urlset>
