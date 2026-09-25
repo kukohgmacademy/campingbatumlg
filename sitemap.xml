@@ -976,4 +976,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://campingbatumalang.web.id/aturan-dan-larangan-di-kawasan-konservasi-pantai-tiga-warna.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://campingbatumalang.web.id/tips-persiapan-kunjungan-ke-pantai-tiga-warna-malang.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
